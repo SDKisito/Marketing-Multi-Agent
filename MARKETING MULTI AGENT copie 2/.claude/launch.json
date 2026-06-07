@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "naiom-platform",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "naiom-platform"],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(python3 api/*.py:*)",
+      "Bash(python3 -m api.*:*)",
+      "Bash(ls api/:*)",
+      "Bash(ls analytics/raw/*:*)",
+      "Bash(cat api/*.py:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}

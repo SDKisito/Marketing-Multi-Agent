@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"dashboard multi-agent SaaS marine navy rose nude professional sidebar chat\" --design-system -p \"NAIOM\" -f markdown)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /tmp/naiom-home.html -w \"HTTP: %{http_code}\\\\nSize: %{size_download}\\\\nRedirect: %{redirect_url}\\\\n\" http://localhost:3001/)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /tmp/naiom-home.html -w \"HTTP: %{http_code}\\\\nSize: %{size_download}\\\\n\" http://localhost:3001/)",
+      "Bash(curl -s -o /tmp/naiom-home.html -w \"HTTP: %{http_code}\\\\nSize: %{size_download}\\\\n\" -L http://localhost:3001/agents/orchestrateur)",
+      "Read(//private/tmp/**)",
+      "Bash(find \"/Users/zeynebmadi/MARKETING MULTI AGENT/naiom-platform/.next\" -type f -delete)",
+      "Bash(find \"/Users/zeynebmadi/MARKETING MULTI AGENT/naiom-platform/.next\" -type d -empty -delete)",
+      "Bash(curl -s -o /tmp/naiom-home.html -w \"HTTP: %{http_code}\\\\n\" -L http://localhost:3001/agents/orchestrateur)",
+      "Bash(xargs -r kill -9)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

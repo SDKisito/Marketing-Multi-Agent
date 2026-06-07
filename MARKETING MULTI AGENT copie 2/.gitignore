@@ -1,0 +1,32 @@
+# Secrets et env locaux
+.env
+.env.local
+.env.*.local
+
+# Analytics bruts (souvent volumineux, contiennent PII)
+analytics/raw/**
+!analytics/raw/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Fichiers temporaires Claude Code
+*.log
+*.tmp
+
+# Plateforme NAIOM — données live et tokens (ne jamais committer)
+naiom-platform/src/data/live-*.json
+naiom-platform/src/data/google-tokens.json
+naiom-platform/node_modules/
+naiom-platform/.next/
