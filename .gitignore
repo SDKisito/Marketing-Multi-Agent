@@ -1,0 +1,33 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+.next/
+.turbo/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Analytics bruts (PII)
+"MARKETING MULTI AGENT copie 2/analytics/raw/"
+
+# Données live et tokens Google (ne jamais committer)
+"MARKETING MULTI AGENT copie 2/naiom-platform/src/data/live-*.json"
+"MARKETING MULTI AGENT copie 2/naiom-platform/src/data/google-tokens.json"
+
+# Logs
+*.log
+*.tmp

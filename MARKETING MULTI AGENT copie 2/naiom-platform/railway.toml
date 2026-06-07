@@ -1,0 +1,17 @@
+# Railway — Nando IT Solutions Multi-Agent Platform
+# Déployé depuis le repo racine : le serveur tourne dans naiom-platform/
+# process.cwd() = naiom-platform/ → REPO_ROOT = parent (copie 2/) → accès aux agents, briefs, etc.
+
+[build]
+builder = "nixpacks"
+buildCommand = "npm ci && npm run build"
+
+[deploy]
+startCommand = "npm start"
+healthcheckPath = "/"
+healthcheckTimeout = 300
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+
+[environments.production]
+NODE_ENV = "production"

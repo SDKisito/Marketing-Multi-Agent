@@ -1,0 +1,68 @@
+name: CI/CD — Nando IT Solutions
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Chemin vers l'app Next.js (relatif à la racine du repo)
+env:
+  APP_DIR: MARKETING MULTI AGENT copie 2/naiom-platform
+
+jobs:
+  # ──────────────────────────────────────────
+  # JOB 1 — Build & vérification de types
+  # ──────────────────────────────────────────
+  build:
+    name: Build & Type Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: '${{ env.APP_DIR }}/package-lock.json'
+
+      - name: Install dependencies
+        working-directory: '${{ env.APP_DIR }}'
+        run: npm ci
+
+      - name: Type check (tsc)
+        working-directory: '${{ env.APP_DIR }}'
+        run: npx tsc --noEmit
+
+      - name: Build Next.js
+        working-directory: '${{ env.APP_DIR }}'
+        run: npm run build
+        env:
+          # Clé requise pour la build (évite les erreurs d'import)
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NODE_ENV: production
+
+  # ──────────────────────────────────────────
+  # JOB 2 — Déploiement Railway (main seulement)
+  # ──────────────────────────────────────────
+  deploy:
+    name: Deploy to Railway
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
+
+      - name: Deploy to Railway
+        # --detach : ne bloque pas la CI, Railway gère le rollout
+        run: railway up --service "${{ secrets.RAILWAY_SERVICE_ID }}" --detach
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
