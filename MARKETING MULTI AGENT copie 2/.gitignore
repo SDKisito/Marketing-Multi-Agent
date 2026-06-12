@@ -1,4 +1,4 @@
-# Secrets et env locaux
+﻿# Secrets et env locaux
 .env
 .env.local
 .env.*.local
@@ -25,8 +25,8 @@ Thumbs.db
 *.log
 *.tmp
 
-# Plateforme NAIOM — données live et tokens (ne jamais committer)
-naiom-platform/src/data/live-*.json
-naiom-platform/src/data/google-tokens.json
-naiom-platform/node_modules/
-naiom-platform/.next/
+# Plateforme Nando IT Solutions — données live et tokens (ne jamais committer)
+nando-it-platform/src/data/live-*.json
+nando-it-platform/src/data/google-tokens.json
+nando-it-platform/node_modules/
+nando-it-platform/.next/

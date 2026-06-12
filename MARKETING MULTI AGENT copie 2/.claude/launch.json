@@ -1,10 +1,10 @@
-{
+﻿{
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "naiom-platform",
+      "name": "nando-it-platform",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev", "--prefix", "naiom-platform"],
+      "runtimeArgs": ["run", "dev", "--prefix", "nando-it-platform"],
       "port": 3000,
       "autoPort": true
     }
