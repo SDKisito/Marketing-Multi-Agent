@@ -18,6 +18,9 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: "Nando IT Solutions · Multi-Agent Platform",
   description: "Ton équipe IA, sous la main — Nando IT Solutions.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

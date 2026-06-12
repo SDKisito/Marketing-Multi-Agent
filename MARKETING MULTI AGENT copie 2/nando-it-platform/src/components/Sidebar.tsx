@@ -16,11 +16,11 @@ export async function Sidebar({ activeSlug }: { activeSlug?: string }) {
   return (
     <aside className="sticky top-4 h-[calc(100vh-2rem)] w-72 shrink-0 ml-4 flex flex-col overflow-hidden rounded-3xl glass-brutal z-20">
       <Link href="/" className="flex items-center gap-3 px-5 py-5 border-b border-white/10 hover:opacity-80 transition-opacity">
-        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--color-accent)] text-white font-black text-xl border border-white/10 shadow-[0_8px_24px_-8px_rgba(0,0,0,0.5)]">
-          N
+        <div className="flex h-11 w-11 items-center justify-center rounded-xl overflow-hidden border border-white/10 shadow-[0_8px_24px_-8px_rgba(0,0,0,0.5)] bg-white">
+          <img src="/favicon.png" alt="Nando IT" className="h-8 w-8 object-contain" />
         </div>
         <div className="flex flex-col leading-tight">
-          <span className="text-[15px] font-black tracking-tight text-[var(--color-ink)]">Nando IT</span>
+          <img src="/logo-nando-it.png" alt="Nando IT" className="h-5 object-contain object-left" />
           <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--color-muted)]">
             Multi-Agent Platform
           </span>
