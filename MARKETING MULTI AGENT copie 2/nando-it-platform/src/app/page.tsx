@@ -23,13 +23,11 @@ export default async function HomePage() {
       <header className="sticky top-0 z-30">
         <div className="mx-auto max-w-7xl flex items-center justify-between px-6 sm:px-10 py-5">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[var(--color-accent)] text-white font-bold text-lg shadow-[0_8px_30px_-8px_rgba(232,70,31,0.7)]">
-              N
+            <div className="flex h-10 w-10 items-center justify-center rounded-2xl overflow-hidden bg-white shadow-[0_8px_30px_-8px_rgba(232,70,31,0.7)]">
+              <img src="/favicon.png" alt="Nando IT" className="h-7 w-7 object-contain" />
             </div>
             <div>
-              <div className="text-[14px] font-semibold tracking-tight text-[var(--color-ink)]">
-                Nando IT Solutions<span className="text-[var(--color-accent)]">.</span>
-              </div>
+              <img src="/logo-nando-it.png" alt="Nando IT Solutions" className="h-5 object-contain object-left" />
               <div className="text-[10px] font-medium tracking-[0.14em] text-[var(--color-ink-dim)] uppercase">
                 Multi-Agent Platform
               </div>
